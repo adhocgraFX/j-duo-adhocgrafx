@@ -1,0 +1,323 @@
+// Module Chrome Styles
+// ==================================================
+// Module chrome joomskeleton
+.module {
+	background: @white;
+	border: 1px solid @gainsboro; // @jugfuldablue-darker;
+	display: block;
+	font-size: 1em;
+
+	a:hover, a:active {
+		text-decoration: underline !important;
+		background: transparent !important;
+	}
+
+	.module-body {
+		padding: 1em;
+		display: block;
+		overflow: hidden;
+		height: auto;
+		color: @gray-dark;
+
+		div {
+			width: 100%;
+			height: auto;
+			display: block;
+			padding: 0;
+			&.video-container {
+				min-height: 200px;
+			}
+		}
+
+		ul {
+			margin-bottom: 1em;
+			list-style: none outside;
+			margin-left: 0;
+			padding: 0;
+			width: 100%;
+		}
+	}
+
+	.module-title {
+		padding: .5em 1em;
+		margin: 0;
+
+		h4.title {
+			color: @smoke;
+			font-size: 1.25em;
+			line-height: 1.4;
+			font-weight: 400;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+// search
+.module {
+
+	&.search {
+
+		.module-body {
+			padding: 0;
+
+			form {
+				margin: 0;
+
+				input {
+					width: 100%;
+					height: 3em;
+					margin: 0;
+					border: 0; // reset border
+					color: @gray; // @jugfuldablue-light;
+					background: @whitesmoke; // @jugfuldablue-darker;
+
+					&:focus {
+						color: @gray-dark; // @jugfuldablue-darker;
+						background: @smoke; // @jugfuldablue-light;
+					}
+				}
+			}
+		}
+	}
+}
+
+// module-body dark-body für dunkle hintergründe
+.module {
+	&.dark-body {
+		background: @gray-dark !important;
+		border: 1px solid @black;
+
+		.module-body {
+			color: @smoke !important;
+		}
+	}
+}
+
+// modulfarben
+.module {
+
+	// JUG Fulda blue
+	&.jugfulda {
+		border-bottom: .5em solid @jugfuldablue;
+
+		.module-title {
+			background: @jugfuldablue-dark;
+		}
+	}
+
+	// Grautöne
+	&.white {
+		border-bottom: .5em solid @gainsboro-light;
+
+		.module-title {
+			background: @gainsboro;
+
+			h4.title {
+				color: @concrete-darker;
+			}
+		}
+	}
+
+	&.clouds {
+		border-bottom: .5em solid @clouds;
+
+		.module-title {
+			background: @clouds-dark;
+
+			h4.title {
+				color: @concrete-darker;
+			}
+		}
+	}
+
+	&.concrete {
+		border-bottom: .5em solid @concrete;
+
+		.module-title {
+			background: @concrete-dark;
+		}
+	}
+
+	// bunte modulfarben für infos - blau, rot, grün, gelb
+	&.midnightblue {
+		border-bottom: .5em solid @midnightblue;
+
+		.module-title {
+			background: @midnightblue-dark;
+		}
+	}
+
+	&.turquoise {
+		border-bottom: .5em solid @turquoise;
+
+		.module-title {
+			background: @turquoise-dark;
+		}
+	}
+
+	&.blue, &.logo-image {
+		border-bottom: .5em solid @blue;
+
+		.module-title {
+			background: @blue-dark;
+		}
+	}
+
+	&.red, &.alert {
+		border-bottom: .5em solid @red;
+
+		.module-title {
+			background: @red-dark;
+		}
+	}
+
+	&.green, &.success {
+		border-bottom: .5em solid @green;
+
+		.module-title {
+			background: @green-dark;
+		}
+	}
+
+	&.yellow, &.question {
+		border-bottom: .5em solid @yellow;
+
+		.module-title {
+			background: @yellow-dark;
+		}
+	}
+
+	&.orange {
+		border-bottom: .5em solid @orange;
+
+		.module-title {
+			background: @orange-dark;
+		}
+	}
+}
+
+// module chrome transparent
+.module {
+	&.transparent {
+		background: transparent;
+		border: 0 !important;
+		color: inherit !important;
+
+		.module-title {
+			background: transparent;
+
+			h4.title {
+				color: inherit !important;
+			}
+		}
+	}
+}
+
+// module chrome for menu style
+.menu-style {
+
+	.module-body {
+		padding: 0 !important;
+
+		ul {
+			margin: 0 !important;
+
+			li {
+				margin: 0 !important;
+
+				&.active {
+					background: @clouds !important;
+				}
+
+				a {
+					color: @concrete-dark;
+					display: block;
+					padding: .5em 1em;
+					border-bottom: 1px solid @gainsboro-light;
+
+					&:hover {
+						color: @concrete-darker;
+						background: @clouds-dark !important;
+						text-decoration: none !important;
+					}
+
+					&:focus, &:active {
+						color: @whitesmoke;
+						background: @concrete !important;
+					}
+				}
+
+				ul {
+					margin-bottom: 0 !important;
+					margin-top: 0 !important;
+					list-style: disc outside !important;
+
+					li {
+						margin-left: 2em !important;
+						a {
+							border-bottom: 1px solid @gainsboro;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.accordion {
+		margin-bottom: 0;
+	}
+
+	.accordion-inner ul {
+		background: @clouds;
+	}
+
+	.accordion-heading .accordion-toggle {
+		padding: .5em 1em !important;
+	}
+
+	a.accordion-toggle {
+		text-decoration: none !important;
+		color: @concrete-dark !important;
+
+		&:hover {
+			color: @white;
+			background: @clouds-dark !important;
+		}
+
+		&:focus, &:active, .active {
+			color: @whitesmoke !important;
+			background: @concrete !important;
+		}
+
+		&.accordion-parent {
+			text-decoration: none !important;
+
+			&:before {
+				font-family: FontAwesome;
+				font-weight: normal;
+				font-style: normal;
+				display: inline-block;
+				text-decoration: inherit;
+				padding-right: 1em;
+				content: "\F13A"; // chevron sign down
+			}
+
+			&.collapsed:before {
+				font-family: FontAwesome;
+				font-weight: normal;
+				font-style: normal;
+				display: inline-block;
+				text-decoration: inherit;
+				padding-right: 1em;
+				content: "\F139"; // chevron sign up
+			}
+		}
+	}
+}
+
+// bootstrap accordion overrides
+.accordion-group {
+	border: 0 !important;
+	.border-radius(none);
+}
