@@ -97,22 +97,49 @@
 @link-visited-color:    darken(@link-color, 10%);
 
 
-// Typeplate inspired font variables
+// Typeplate inspired font variables plus even more ...
 
 @weight: normal;
 
-@line-height: 1.4;
-@line-height-medium: 1.5;
-@line-height-large: 1.6;
+@line-height:           1.4;
+@line-height-medium:    1.5;
+@line-height-large:     1.6;
 
-@line-height-heading: 1.1;
+@line-height-heading:   1.1;
 
-@font-size: 100%;
-@font-size-medium: 112.5%; // percentage value (16 * 112.5% = 18px)
-@font-size-large: 125%; // percentage value (16 * 125% = 20px)
+@font-size:         100%;
+@font-size-medium:  112.5%; // percentage value (16 * 112.5% = 18px)
+@font-size-large:   125%; // percentage value (16 * 125% = 20px)
 
-@font-size-small: 87.5%; // percentage value (16 * 87.5% = 14px)
-@font-size-mini: 75%; // percentage value (16 * 75% = 12px)
+@font-size-small:   87.5%; // percentage value (16 * 87.5% = 14px)
+@font-size-mini:    75%; // percentage value (16 * 75% = 12px)
+
+// primary fonts to select
+@body-font:    'myriad-pro';
+@heading-font: 'myriad-pro';
+
+// weights to choose and combine
+@thin:          100;
+@hairline:      @thin;
+
+@extra-light:   200;
+
+@light:         300;
+
+@book:          400;
+@normal:        @book;
+
+@medium:        500;
+
+@semibold:      600;
+@demibold:      @semibold;
+
+@bold:          700;
+
+@extra-bold:    800;
+@heavy:         @extra-bold;
+
+@black:         900;
 
 
 // body and basic text colors
