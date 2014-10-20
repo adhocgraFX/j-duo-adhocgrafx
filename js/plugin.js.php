@@ -226,4 +226,25 @@ $textresizer = $this->params->get('textresizer');
 
     });
 
+    // sticky nav and header
+    jQuery(document).ready(function() {
+        var stickyNavTop = jQuery('#sidebar-s1').offset().top;
+
+        var stickyNav = function(){
+            var scrollTop = jQuery(window).scrollTop();
+
+            if (scrollTop > stickyNavTop) {
+                jQuery('#sidebar-s1').addClass('sticky');
+            } else {
+                jQuery('#sidebar-s1').removeClass('sticky');
+            }
+        };
+
+        stickyNav();
+
+        jQuery(window).scroll(function() {
+            stickyNav();
+        });
+    });
+
 </script>

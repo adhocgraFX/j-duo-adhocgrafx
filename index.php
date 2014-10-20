@@ -87,33 +87,11 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     <!-- load css options -->
     <?php include_once ('css/j-template.css.php'); ?>
 
-    <!-- brick fonts
-    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Fira+Sans:300,300i,400,400i,500,500i,700,700i">
-    -->
-
-    <!-- fontAwesome
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    -->
-
-    <!-- google fonts
-    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
-    -->
-
-    <!-- adobe edge web fonts
-    <script src="//use.edgefonts.net/lato:n3,i3,n4,i4,n7,i7.js"></script>
-    -->
-
-    <!-- typekit fonts .. nach oben
-    <script type="text/javascript" src="//use.typekit.net/xxxxxxx.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    -->
-
 </head>
   
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?> sidebar-push">
 
 <div class="wrapper block-group">
-
     <header role="banner">
         <button id="showLeftPush"></button>
         <div class="logo-text">
@@ -135,64 +113,70 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
         <jdoc:include type="modules" name="nav" />
     </nav>
 
-    <?php if ($this->countModules('slideshow')): ?>
-        <section class="rslides_container hide-on-mobile" role="complementary">
-            <jdoc:include type="modules" name="slideshow" />
-        </section>
-    <?php endif; ?>
+    <div class="wrapper-layout">
+        <?php if ($this->countModules('slideshow')): ?>
+            <section class="rslides_container hide-on-mobile" role="complementary">
+                <jdoc:include type="modules" name="slideshow" />
+            </section>
+        <?php endif; ?>
 
-    <?php if ($this->countModules('top_row')): ?>
-        <section class="top" role="complementary">
-            <jdoc:include type="modules" name="top_row" style="jduo" />
-        </section>
-    <?php endif; ?>
+        <?php if ($this->countModules('top_row')): ?>
+            <section class="top" role="complementary">
+                <jdoc:include type="modules" name="top_row" style="jduo" />
+            </section>
+        <?php endif; ?>
 
-    <section class="wrapper-push">
-        <div class="main" role="main">
-            <jdoc:include type="message" />
-            <?php if ($this->countModules('breadcrumbs')): ?>
-                <div class="breadcrumbs-pad" role="navigation">
-                    <jdoc:include type="modules" name="breadcrumbs" />
-                </div>
-            <?php endif; ?>
-            <jdoc:include type="component" />
-        </div>
-		<aside class="sidebar" id="sidebar-s2" role="complementary">
-            <div class="search-pad">
-                <?php if ($this->countModules('search')): ?>
-                    <jdoc:include type="modules" name="search" style="jduo"  />
+        <section class="wrapper-push">
+            <div class="main" role="main">
+                <jdoc:include type="message" />
+                <?php if ($this->countModules('breadcrumbs')): ?>
+                    <div class="breadcrumbs-pad" role="navigation">
+                        <jdoc:include type="modules" name="breadcrumbs" />
+                    </div>
                 <?php endif; ?>
+                <jdoc:include type="component" />
             </div>
-            <?php if ($this->countModules('sidebar')): ?>
-                <jdoc:include type="modules" name="sidebar" style="jduo"  />
-            <?php endif; ?>
-            <?php if ($textresizer == 1): ?>
-                <div class="textresizer-pad">
-                    <ul class="textresizer" id="textsizer-embed">
-                        <li><a href="#nogo" class="small-text" title="small"><span class="icon-angle-down"></span><p hidden>small</p></a></li>
-                        <li><a href="#nogo" class="default-text" title="default"><span class="icon-text-height"></span><p hidden>default</p></a></li>
-                        <li><a href="#nogo" class="large-text" title="large"><span class="icon-angle-up"></span><p hidden>large</p></a></li>
-                    </ul>
-                </div>
-            <?php endif; ?>
-            <?php if ($linkpad == 1): ?>
-                <div class="link-pad">
-                    <ul>
-                        <li><a href="https://plus.google.com/u/0/111658539092346200948/posts/p/pub" target="_blank" title="google plus"><span class="icon-google-plus-square"></span><p hidden>google plu</p></a></li>
-                        <li><a href="https://twitter.com/adhocgraFX" target="_blank" title="twitter"><span class="icon-twitter"></span><p hidden>twitter</p></a></li>
-                        <li><a href="https://github.com/adhocgraFX" target="_blank" title="github"><span class="icon-github"></span><p hidden>github</p></a></li>
-                        <li><a href="http://kunstimunterricht.de" target="_blank" title="Kunst im Unterricht"><span class="icon-external-link"></span><p hidden>Kunst im Unterricht</p></a></li>
-                    </ul>
-                </div>
-            <?php endif; ?>
-		</aside>
-    </section>
 
-    <?php if ($this->countModules('bottom_row')): ?>
-        <section class="bottom" role="complementary">
-            <jdoc:include type="modules" name="bottom_row" style="jduo" />
+            <aside class="sidebar" id="sidebar-s2" role="complementary">
+                <div class="search-pad">
+                    <?php if ($this->countModules('search')): ?>
+                        <jdoc:include type="modules" name="search" style="jduo"  />
+                    <?php endif; ?>
+                </div>
+
+                <?php if ($this->countModules('sidebar')): ?>
+                    <jdoc:include type="modules" name="sidebar" style="jduo"  />
+                <?php endif; ?>
+
+                <?php if ($textresizer == 1): ?>
+                    <div class="textresizer-pad">
+                        <ul class="textresizer" id="textsizer-embed">
+                            <li><a href="#nogo" class="small-text" title="small"><span class="icon-angle-down"></span><p hidden>small</p></a></li>
+                            <li><a href="#nogo" class="default-text" title="default"><span class="icon-text-height"></span><p hidden>default</p></a></li>
+                            <li><a href="#nogo" class="large-text" title="large"><span class="icon-angle-up"></span><p hidden>large</p></a></li>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
+                <?php if ($linkpad == 1): ?>
+                    <div class="link-pad">
+                        <ul>
+                            <li><a href="https://plus.google.com/u/0/111658539092346200948/posts/p/pub" target="_blank" title="google plus" rel="me"><span class="icon-google-plus-square"></span><p hidden>google plu</p></a></li>
+                            <li><a href="https://twitter.com/adhocgraFX" target="_blank" title="twitter" rel="me"><span class="icon-twitter"></span><p hidden>twitter</p></a></li>
+                            <li><a href="https://github.com/adhocgraFX" target="_blank" title="github" rel="me"><span class="icon-github"></span><p hidden>github</p></a></li>
+                            <li><a href="http://kunstimunterricht.de" target="_blank" title="Kunst im Unterricht" rel="me"><span class="icon-external-link"></span><p hidden>Kunst im Unterricht</p></a></li>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            </aside>
         </section>
-    <?php endif; ?>
+
+        <?php if ($this->countModules('bottom_row')): ?>
+            <section class="bottom" role="complementary">
+                <jdoc:include type="modules" name="bottom_row" style="jduo" />
+            </section>
+        <?php endif; ?>
+    </div>
 
     <?php if ($this->countModules('footer')): ?>
         <footer role="contentinfo">

@@ -3,7 +3,9 @@
 header {
 	// .order(1);
 	height: 3em;
-	background: @whitesmoke; // @jugfuldablue-dark;
+	background: @whitesmoke;
+    position: fixed;
+    z-index: 100;
 
 	.logo-text {
 		overflow: hidden;
@@ -20,7 +22,7 @@ header {
 			font-size: 1.5em;
 			color: @brand-color;
 			padding: 0;
-			margin: .5em 0;
+			margin: .5em 2em;
 		}
 	}
 }
@@ -94,12 +96,22 @@ header {
 }
 
 .no-js .logo-image {
-	.visuallyhidden
+	.visuallyhidden;
 }
 
 .wrapper {
 	// .flexbox;
 	// .flex-flow(column wrap);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+ }
+
+// experiment
+.wrapper-layout {
+    margin: 3em auto 0 auto;
+    width: 100%;
+    padding: 0;
 }
 
 aside {
@@ -112,7 +124,7 @@ aside {
 }
 
 nav {
-	background: @whitesmoke; // @jugfuldablue-dark;
+	background: @whitesmoke;
 	// .order(2);
 }
 
@@ -123,11 +135,11 @@ nav {
 section {
 
 	&.rslides_container {
-		// .order (3);
+        // .order (3);
 	}
 
 	&.top {
-		// .order(5);
+        // .order(5);
 		background: @gainsboro-darker;
 	}
 
@@ -163,19 +175,28 @@ footer, section.top, section.bottom {
 }
 
 // media queries // 48 x 16 = 768
-@media screen and (min-width: 48em){
+@media screen and (min-width: 48em) {
 
-	.wrapper-push {
-		// max-width: 58em;
-		// .order(5);
-	}
+    .sticky {
+        position: fixed !Important;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 100;
+    }
 
-	.main {
+    // experiment
+    .wrapper-layout {
+        margin: 0 auto;
+    }
+
+    .main {
 		padding: 1em 2em !important;
 	}
 
 	header {
 		height: 6em;
+        position: relative;
 
 		.logo-text {
 			height: 6em;
@@ -187,12 +208,12 @@ footer, section.top, section.bottom {
 	}
 
 	section {
-		&.slides {
-			// .order(3);
+		&.rslides_container {
+            // .order(3);
 		}
 
 		&.top {
-			// .order(4);
+            // .order(4);
 		}
 	}
 
@@ -215,6 +236,6 @@ footer, section.top, section.bottom {
     }
 }
 
-@media screen and (min-width: 80em){
+@media screen and (min-width: 80em) {
 
 }
