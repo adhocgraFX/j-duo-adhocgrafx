@@ -36,6 +36,7 @@
 		<folder>js</folder>
 		<folder>languages</folder>
         <folder>fonts</folder>
+
 		<filename>component.php</filename>
 		<filename>error.php</filename>
 		<filename>index.php</filename>

@@ -35,6 +35,7 @@ $doc->addStyleSheet($tpath.'/css/j-template.css');
 
 // modernizr mit html5-shiv must be in the head
 $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
+
 ?>
 
 <!doctype html>
@@ -53,7 +54,7 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- typekit fonts -->
-    <script type="text/javascript" src="//use.typekit.net/xyz.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/zdh2try.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <!-- Bildverkleinerung über mobify cdn -->
@@ -92,6 +93,7 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?> sidebar-push">
 
 <div class="wrapper block-group">
+
     <header role="banner">
         <button id="showLeftPush"></button>
         <div class="logo-text">
@@ -114,6 +116,7 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     </nav>
 
     <div class="wrapper-layout">
+
         <?php if ($this->countModules('slideshow')): ?>
             <section class="rslides_container hide-on-mobile" role="complementary">
                 <jdoc:include type="modules" name="slideshow" />
@@ -127,13 +130,16 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
         <?php endif; ?>
 
         <section class="wrapper-push">
+
             <div class="main" role="main">
                 <jdoc:include type="message" />
+
                 <?php if ($this->countModules('breadcrumbs')): ?>
                     <div class="breadcrumbs-pad" role="navigation">
                         <jdoc:include type="modules" name="breadcrumbs" />
                     </div>
                 <?php endif; ?>
+
                 <jdoc:include type="component" />
             </div>
 
@@ -161,10 +167,10 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
                 <?php if ($linkpad == 1): ?>
                     <div class="link-pad">
                         <ul>
-                            <li><a href="https://plus.google.com/u/0/111658539092346200948/posts/p/pub" target="_blank" title="google plus" rel="me"><span class="icon-google-plus-square"></span><p hidden>google plu</p></a></li>
-                            <li><a href="https://twitter.com/adhocgraFX" target="_blank" title="twitter" rel="me"><span class="icon-twitter"></span><p hidden>twitter</p></a></li>
-                            <li><a href="https://github.com/adhocgraFX" target="_blank" title="github" rel="me"><span class="icon-github"></span><p hidden>github</p></a></li>
-                            <li><a href="http://kunstimunterricht.de" target="_blank" title="Kunst im Unterricht" rel="me"><span class="icon-external-link"></span><p hidden>Kunst im Unterricht</p></a></li>
+                            <li><a href="https://plus.google.com/u/0/111658539092346200948/posts/p/pub" target="_blank" title="google plus"><span class="icon-google-plus-square"></span><p hidden>google plu</p></a></li>
+                            <li><a href="https://twitter.com/adhocgraFX" target="_blank" title="twitter"><span class="icon-twitter"></span><p hidden>twitter</p></a></li>
+                            <li><a href="https://github.com/adhocgraFX" target="_blank" title="github"><span class="icon-github"></span><p hidden>github</p></a></li>
+                            <li><a href="http://kunstimunterricht.de" target="_blank" title="Kunst im Unterricht"><span class="icon-external-link"></span><p hidden>Kunst im Unterricht</p></a></li>
                         </ul>
                     </div>
                 <?php endif; ?>
@@ -176,6 +182,7 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
                 <jdoc:include type="modules" name="bottom_row" style="jduo" />
             </section>
         <?php endif; ?>
+
     </div>
 
     <?php if ($this->countModules('footer')): ?>
