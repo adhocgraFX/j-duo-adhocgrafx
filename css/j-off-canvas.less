@@ -12,11 +12,15 @@
 // nav switches between vertical and horizontal menu
 
 nav {
-	left: -17em;
+	// left: -17em;
+	-webkit-transform: translateX(-17em);
+	transform: translateX(-17em);
 	width: 17em;
 
 	&.sidebar-open {
-		left: -17em;
+		// left: -17em;
+		-webkit-transform: translateX(-17em);
+		transform: translateX(-17em);
 	}
 }
 
@@ -38,21 +42,22 @@ aside {
 
 // für links
 .sidebar-push-toright {
-	left: 17em;
+	-webkit-transform: translateX(17em);
+	transform: translateX(17em);
 }
 
 // für rechts
 .sidebar-push-toleft {
-	left: -17em;
+	-webkit-transform: translateX(-17em);
+	transform: translateX(-17em);
 }
 
 // Transitions
 .sidebar-push-toleft,
 .sidebar-push-toright,
 .sidebar-push  {
-	-webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 03s ease-out;
-	transition: all 0.3s ease-out;
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	transition: transform 0.3s ease-out;
 }
 
 .wrapper-push {
@@ -163,11 +168,15 @@ aside {
 @media screen and (min-width: 30em) {
 
 	nav {
-		left: -27em;
+		// left: -27em;
+		-webkit-transform: translateX(-27em);
+		transform: translateX(-27em);
 		width: 27em;
 
 		&.sidebar-open {
-			left: -27em;
+			// left: -27em;
+			-webkit-transform: translateX(-27em);
+			transform: translateX(-27em);
 		}
 	}
 
@@ -182,12 +191,14 @@ aside {
 
 	// für links
 	.sidebar-push-toright {
-		left: 27em;
+		-webkit-transform: translateX(27em);
+		transform: translateX(27em);
 	}
 
 	// für rechts
 	.sidebar-push-toleft {
-		left: -27em;
+		-webkit-transform: translateX(-27em);
+		transform: translateX(-27em);
 	}
 }
 
@@ -198,7 +209,9 @@ aside {
 	}
 
 	nav {
-		left: 0;
+		// left: 0;
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
 		width: 100%;
 	}
 

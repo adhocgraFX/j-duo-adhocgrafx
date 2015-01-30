@@ -24,7 +24,7 @@ $logotitle = $this->params->get('logotitle');
 $textresizer = $this->params->get('textresizer');
 $linkpad = $this->params->get('linkpad');
 
-// Add Joomla! JavaScript Frameworks
+// Add Joomla! JavaScript Framework
 JHtml::_('bootstrap.framework');
 
 // Add current user information
